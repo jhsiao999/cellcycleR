@@ -44,8 +44,6 @@ sin_cell_ordering_class <- function(cycle_data, celltime_levels,
     stop("fix.phase=TRUE and phase not provided")
   if(fix.phase==FALSE & !is.null(phase_in))
     stop("fix.phase=FALSE and phase provided")
-  if(length(unique(cell_times_iter))==1)
-    stop("All the points have converged at same point on cycle");
 
   if(n_cores==1) message("Computations NOT paralleized")
   if(n_cores>1) message(paste("Computations parallelized using", n_cores, "cores"))
@@ -122,7 +120,7 @@ sin_cell_ordering_class <- function(cycle_data, celltime_levels,
                  sigma = sigma_iter,
                  loglik = loglik_iter,
                  signal_intensity = signal_intensity_iter,
-                 num_iter = num_iter,
+                 num_iter = iter,
                  loglik_iter = loglik_iter_vec)
 
   if( !is.null(save_path) ) { save(output, file=save_path) }
