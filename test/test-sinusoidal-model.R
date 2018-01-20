@@ -4,7 +4,7 @@
 #
 # Date: 2017-12-16
 
-devtools::install_github("jhsiao999/cellcycleR", ref="0.1.3")
+devtools::install_github("jhsiao999/cellcycleR", ref="devel")
 
 library(cellcycleR)
 
@@ -31,7 +31,6 @@ fit_iter <- sin_cell_ordering_iter(cycle_data=cycle_data,
                                    n_cores=3)
 
 # fitting sin_cell_ordering_class
-# no parallel computing
 fit_lapply <- sin_cell_ordering_class(cycle_data=cycle_data,
                                celltime_levels=celltime_levels,
                                num_shuffle=1,
@@ -41,11 +40,4 @@ fit_lapply <- sin_cell_ordering_class(cycle_data=cycle_data,
                                n_cores=3)
 str(fit)
 
-# parallele computing
-fit_mclapply <- sin_cell_ordering_class(cycle_data=cycle_data,
-                               celltime_levels=celltime_levels,
-                               num_iter=2,
-                               verbose = FALSE, freq = 1,
-                               tol = .01, maxiter = 500,
-                               parallel = TRUE, n_cores=2)
-str(fit_mclapply)
+
