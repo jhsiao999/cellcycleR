@@ -11,3 +11,8 @@
      continue to iterate until percent increase in log-likelihood is smaller than specified or
      until the number of iterations reached the default maximum.
 
+0.1.4
+
+* debug sin_cell_ordering_class(): remove the following code.
+	if (length(unique(cell_times_iter)) == 1) 
+        stop("All the points have converged at same point on cycle") 
