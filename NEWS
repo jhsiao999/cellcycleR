@@ -21,3 +21,6 @@
 
 * add R dependency (>=3.2)
 
+0.1.6
+
+* ignore git tag conflicts
