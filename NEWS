@@ -16,3 +16,8 @@
 * debug sin_cell_ordering_class(): remove the following code.
 	if (length(unique(cell_times_iter)) == 1) 
         stop("All the points have converged at same point on cycle") 
+
+0.1.5
+
+* add R dependency (>=3.2)
+
